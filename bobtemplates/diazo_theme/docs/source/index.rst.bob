@@ -1,0 +1,23 @@
+**************{{% for n in range(0, theme.name|length) %}}*{{% endfor %}}
+
+Propertyshelf {{{ theme.name }}}
+**************{{% for n in range(0, theme.name|length) %}}*{{% endfor %}}
+
+
+.. only:: html
+
+  Contents
+  ========
+
+.. toctree::
+   :maxdepth: 2
+
+
+.. only:: html
+
+  Indices and tables
+  ==================
+
+  * :ref:`genindex`
+  * :ref:`modindex`
+  * :ref:`search`

@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="ps.diazo.{{{ package.name }}}">
+
+  <!-- GenericSetup Profiles. -->
+  <!-- ====================== -->
+  <genericsetup:registerProfile
+      name="default"
+      title="Propertyshelf {{{ theme.name }}}"
+      directory="profiles/default"
+      description="Installs the diazo theme in the Plone site."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Propertyshelf {{{ theme.name }}}: Uninstall"
+      directory="profiles/uninstall"
+      description="Removes the diazo theme from the Plone site."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+
+  <!-- GenericSetup Upgrade Steps. -->
+  <!-- =========================== -->
+  <!--
+  <genericsetup:upgradeStep
+      title="Upgrade ps.diazo.{{{ package.name }}}"
+      description="Updrage step description."
+      source="1000"
+      destination="1001"
+      handler=".migration.migrate_to_1001"
+      sortkey="1"
+      profile="ps.diazo.{{{ package.name }}}:default"
+      />
+  -->
+
+</configure>
