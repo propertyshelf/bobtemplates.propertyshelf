@@ -16,6 +16,7 @@ The templates provided by ``bobtemplates.propertyshelf`` are categorized as foll
 - Plone and Diazo Packages
 - Zope Packages (planned)
 - Pyramid Packages (planned)
+- MLS Packages (planned)
 
 Plone and Diazo Packages
 ------------------------
