@@ -11,6 +11,12 @@ To create a package like ``ps.diazo.mytheme``::
 Available Templates
 ===================
 
+The templates provided by ``bobtemplates.propertyshelf`` are categorized as follows:
+
+- Plone and Diazo Packages
+- Zope Packages (planned)
+- Pyramid Packages (planned)
+
 Plone and Diazo Packages
 ------------------------
 
