@@ -5,7 +5,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 version = '0.1dev'
-description = 'Mr.Bob Templates for Propertyshelf projects.'
+description = 'mr.bob templates for Propertyshelf projects.'
 long_description = ('\n'.join([
     open('README.rst').read(),
     open('CHANGES.rst').read(),
