@@ -3,4 +3,3 @@
 
 PROFILE_ID = u'profile-ps.diazo.{{{ package.name }}}'
 PROJECT_NAME = 'ps.diazo.{{{ package.name }}}'
-

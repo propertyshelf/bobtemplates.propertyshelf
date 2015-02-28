@@ -16,4 +16,3 @@ def uninstall(portal, reinstall=False):
             '{0}:uninstall'.format(config.PROFILE_ID)
         )
         logger.info('Uninstall done')
-
