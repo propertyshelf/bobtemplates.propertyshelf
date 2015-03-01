@@ -1,7 +1,7 @@
-bobtemplates.propertyshelf
-==========================
+ps.bob
+======
 
-``bobtemplates.propertyshelf`` provides several `mr.bob`_ template to generate packages for `Propertyshelf`_ projects.
+``ps.bob`` provides several `mr.bob`_ template to generate packages for `Propertyshelf`_ projects.
 
 To create a package like ``ps.diazo.mytheme``::
 
@@ -11,7 +11,7 @@ To create a package like ``ps.diazo.mytheme``::
 Available Templates
 ===================
 
-The templates provided by ``bobtemplates.propertyshelf`` are categorized as follows:
+The templates provided by ``ps.bob`` are categorized as follows:
 
 - Plone and Diazo Packages
 - Zope Packages (planned)
@@ -44,7 +44,7 @@ Package Name of the Theme [example]
 Features
 ========
 
-Package created with ``bobtemplates.propertyshelf`` use the current best-practices when creating an addon.
+Package created with ``ps.bob`` use the current best-practices when creating an addon.
 
 
 Plone and Diazo Packages
@@ -75,7 +75,7 @@ Tests
 Compatibility
 =============
 
-Addons created with ``bobtemplates.propertyshelf`` are tested to work in Plone 4.3.x.
+Addons created with ``ps.bob`` are tested to work in Plone 4.3.x.
 They should also work with other versions but that was not tested.
 
 
@@ -94,7 +94,7 @@ Use in a buildout
     recipe = zc.recipe.egg
     eggs =
         mr.bob
-        bobtemplates.propertyshelf
+        ps.bob
 
 
 This creates a mrbob-executeable in your bin-directory.
@@ -106,11 +106,11 @@ Call it from the ``src``-directory of your project like this.::
 Installation in a virtualenv
 ----------------------------
 
-You can also install ``bobtemplates.propertyshelf`` in a virtualenv.::
+You can also install ``ps.bob`` in a virtualenv.::
 
     $ pip install mr.bob
 
-    $ pip install bobtemplates.propertyshelf
+    $ pip install ps.bob
 
 Now you can use it like this::
 

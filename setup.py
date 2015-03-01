@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Setup for bobtemplates.propertyshelf package."""
+"""Setup for ps.bob package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -18,7 +18,7 @@ install_requires = [
 ]
 
 setup(
-    name='bobtemplates.propertyshelf',
+    name='ps.bob',
     version=version,
     description=description,
     long_description=long_description,
@@ -35,11 +35,12 @@ setup(
     keywords='',
     author='Propertyshelf, Inc.',
     author_email='development@propertyshelf.com',
-    url='https://github.com/propertyshelf/bobtemplates.propertyshelf',
-    download_url='http://pypi.python.org/pypi/bobtemplates.propertyshelf',
+    url='https://github.com/propertyshelf/ps.bob',
+    download_url='http://pypi.python.org/pypi/ps.bob',
     license='BSD',
-    packages=find_packages(exclude=['ez_setup']),
-    namespace_packages=['bobtemplates'],
+    packages=find_packages('src', exclude=['ez_setup']),
+    package_dir={'': 'src'},
+    namespace_packages=['ps', 'ps.bob'],
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
