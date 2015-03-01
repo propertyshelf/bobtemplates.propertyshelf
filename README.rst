@@ -96,6 +96,14 @@ Use in a buildout
         mr.bob
         ps.bob
 
+If you want to use the latest development version from GitHub, add ``ps.bob`` to your ``mr.developer`` source section::
+
+    [buildout]
+    extensions += mr.developer
+
+    [sources]
+    ps.bob git git://github.com/propertyshelf/ps.bob.git
+
 
 This creates a mrbob-executeable in your bin-directory.
 Call it from the ``src``-directory of your project like this.::
@@ -108,15 +116,15 @@ Installation in a virtualenv
 
 You can also install ``ps.bob`` in a virtualenv.::
 
-    $ pip install mr.bob
-
     $ pip install ps.bob
+
+You can also install the latest version of ``ps.bob`` directly from GitHub::
+
+    $ pip install -e git://github.com/propertyshelf/ps.bob.git#egg=ps.bob
 
 Now you can use it like this::
 
     $ mrbob -O ps.diazo.mytheme ps.bob:diazo_theme
-
-See `mr.bob`_ documentation for further information.
 
 
 .. _`mr.bob`: http://mrbob.readthedocs.org/en/latest/
