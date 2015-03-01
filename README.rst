@@ -5,7 +5,7 @@ ps.bob
 
 To create a package like ``ps.diazo.mytheme``::
 
-    $ mrbob -O ps.diazo.mytheme bobtemplates:diazo_theme
+    $ mrbob -O ps.diazo.mytheme ps.bob:diazo_theme
 
 
 Available Templates
@@ -100,7 +100,7 @@ Use in a buildout
 This creates a mrbob-executeable in your bin-directory.
 Call it from the ``src``-directory of your project like this.::
 
-    $ ../bin/mrbob -O ps.diazo.mytheme bobtemplates:diazo_theme
+    $ ../bin/mrbob -O ps.diazo.mytheme ps.bob:diazo_theme
 
 
 Installation in a virtualenv
@@ -114,7 +114,7 @@ You can also install ``ps.bob`` in a virtualenv.::
 
 Now you can use it like this::
 
-    $ mrbob -O ps.diazo.mytheme bobtemplates:diazo_theme
+    $ mrbob -O ps.diazo.mytheme ps.bob:diazo_theme
 
 See `mr.bob`_ documentation for further information.
 
