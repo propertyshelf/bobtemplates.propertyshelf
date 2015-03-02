@@ -18,6 +18,7 @@ parts +=
     node
     rebuild_docs-sh
     rebuild_i18n-sh
+    releaser
     sphinxbuilder
     testnorobot
     zptlint
