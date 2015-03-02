@@ -4,6 +4,7 @@ extends =
     https://raw.githubusercontent.com/collective/buildout.plonetest/master/test-4.x.cfg
     https://raw.githubusercontent.com/collective/buildout.plonetest/master/qa.cfg
     https://raw.githubusercontent.com/plone/plone.app.robotframework/master/versions.cfg
+    https://raw.githubusercontent.com/propertyshelf/buildout.plone/master/common.cfg
 
 versions = versions
 package-name = ps.diazo.{{{ package.name }}}
@@ -49,46 +50,7 @@ zptlint = True
 zptlint-bin = bin/zptlint
 
 
-[i18ndude]
-recipe = zc.recipe.egg
-eggs = i18ndude
-
-
-[rebuild_docs-sh]
-recipe = collective.recipe.template
-input = inline:
-    #!/bin/bash
-    cd docs/build
-    rm -rf doctrees
-    rm -rf html
-    make html
-    cd ../..
-output = ${buildout:directory}/bin/rebuild_docs.sh
-mode = 755
-
-
-[rebuild_i18n-sh]
-recipe = collective.recipe.template
-url = https://raw.githubusercontent.com/propertyshelf/buildout.plone/master/templates/rebuild_i18n.sh.in
-output = ${buildout:directory}/bin/rebuild_i18n.sh
-mode = 755
-
-
-[sphinxbuilder]
-recipe = collective.recipe.sphinxbuilder
-eggs =
-    ${instance:eggs}
-    sphinx_rtd_theme
-source = ${buildout:directory}/docs/source
-build = ${buildout:directory}/docs/build
-
-
 [sources]
-
-
-[testnorobot]
-<= test
-initialization = os.environ['NO_ROBOT'] = '1'
 
 
 [versions]
