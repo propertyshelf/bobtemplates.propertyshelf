@@ -36,10 +36,6 @@ class BaseTemplateTest(unittest.TestCase):
                 **options
             )
         )
-        # return self.env.run(
-        #     '%(dir)s/bin/mrbob -O %(project)s --config '
-        #     '%(dir)s/%(answers_file)s %(dir)s/src/ps/bob/%(template)s'
-        #     % options)
 
 
 class DiazoThemeTest(BaseTemplateTest):
