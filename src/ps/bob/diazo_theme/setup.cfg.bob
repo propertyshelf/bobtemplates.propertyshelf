@@ -21,3 +21,8 @@ index-servers =
 
 [sdist]
 formats = zip
+
+
+[ps.releaser]
+diazo_path = src/ps/diazo/{{{ package.name }}}/diazo_resources
+add_version_to_title = 1
