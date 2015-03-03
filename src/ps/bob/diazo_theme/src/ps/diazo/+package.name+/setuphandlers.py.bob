@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""Post install import steps for ps.diazo.{{{ package.name }}}."""
+
+
+def isNotCurrentProfile(context):
+    return context.readDataFile(
+        'ps.diazo.{{{ package.name }}}_marker.txt'
+    ) is None
+
+
+def post_install(context):
+    """Post install script."""
+    if isNotCurrentProfile(context):
+        return
+    # Do something during the installation of this package

@@ -23,6 +23,16 @@
       />
 
 
+  <!-- GenericSetup Import Steps. -->
+  <!-- ========================== -->
+  <genericsetup:importStep
+      name="ps.diazo.{{{ package.name }}}-postInstall"
+      title="Propertyshelf {{{ theme.name }}} post_install import step"
+      description="Post install import step from ps.diazo.{{{ package.name }}}."
+      handler=".setuphandlers.post_install">
+  </genericsetup:importStep>
+
+
   <!-- GenericSetup Upgrade Steps. -->
   <!-- =========================== -->
   <!--
