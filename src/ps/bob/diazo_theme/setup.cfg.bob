@@ -24,5 +24,6 @@ formats = zip
 
 
 [ps.releaser]
-diazo_path = src/ps/diazo/{{{ package.name }}}/diazo_resources
-add_version_to_title = 1
+diazo_export.enabled = 1
+diazo_export.path = src/ps/diazo/{{{ package.name }}}/diazo_resources
+diazo_export.adjust_title = 1
