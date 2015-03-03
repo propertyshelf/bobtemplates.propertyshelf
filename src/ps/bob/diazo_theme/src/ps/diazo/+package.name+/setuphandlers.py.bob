@@ -2,7 +2,7 @@
 """Post install import steps for ps.diazo.{{{ package.name }}}."""
 
 
-def isNotCurrentProfile(context):
+def is_not_current_profile(context):
     return context.readDataFile(
         'ps.diazo.{{{ package.name }}}_marker.txt'
     ) is None
@@ -10,6 +10,6 @@ def isNotCurrentProfile(context):
 
 def post_install(context):
     """Post install script."""
-    if isNotCurrentProfile(context):
+    if is_not_current_profile(context):
         return
     # Do something during the installation of this package
