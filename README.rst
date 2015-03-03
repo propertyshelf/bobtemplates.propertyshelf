@@ -102,7 +102,7 @@ If you want to use the latest development version from GitHub, add ``ps.bob`` to
     extensions += mr.developer
 
     [sources]
-    ps.bob git git://github.com/propertyshelf/ps.bob.git
+    ps.bob = git git://github.com/propertyshelf/ps.bob.git
 
 
 This creates a mrbob-executeable in your bin-directory.
