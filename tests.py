@@ -58,6 +58,7 @@ class DiazoThemeTest(BaseTemplateTest):
             p + '/.editorconfig',
             p + '/.gitignore',
             p + '/.jshintignore',
+            p + '/.travis.yml',
             p + '/CHANGES.rst',
             p + '/README.rst',
             p + '/bootstrap.py',
@@ -128,6 +129,7 @@ class DiazoThemeTest(BaseTemplateTest):
             p_src + '/mytheme/tests/robot/test_setup.robot',
             p_src + '/mytheme/tests/test_robot.py',
             p_src + '/mytheme/tests/test_setup.py',
+            p + '/travis.cfg',
         ]
         self.assertItemsEqual(result.files_created.keys(), expected)
 
@@ -148,6 +150,7 @@ class DiazoThemeTest(BaseTemplateTest):
             p + '/.editorconfig',
             p + '/.gitignore',
             p + '/.jshintignore',
+            p + '/.travis.yml',
             p + '/CHANGES.rst',
             p + '/README.rst',
             p + '/bootstrap.py',
@@ -218,5 +221,6 @@ class DiazoThemeTest(BaseTemplateTest):
             p_src + '/domain/tests/robot/test_setup.robot',
             p_src + '/domain/tests/test_robot.py',
             p_src + '/domain/tests/test_setup.py',
+            p + '/travis.cfg',
         ]
         self.assertItemsEqual(result.files_created.keys(), expected)
