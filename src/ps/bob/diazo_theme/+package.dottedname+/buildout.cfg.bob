@@ -12,6 +12,7 @@ package-extras = [test]
 eggs +=
     Products.PrintingMailHost
 test-eggs += Pillow
+robot_tests_folder = ${buildout:directory}/src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/tests/robot
 
 parts +=
     i18ndude
@@ -22,6 +23,7 @@ parts +=
     sphinxbuilder
     testnorobot
     zptlint
+    updatedocsimages
 
 extensions += mr.developer
 
