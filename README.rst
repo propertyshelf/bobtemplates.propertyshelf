@@ -5,7 +5,10 @@ ps.bob
 
 To create a package like ``ps.diazo.mytheme``::
 
-    $ mrbob -O ps.diazo.mytheme ps.bob:diazo_theme
+    $ mrbob ps.bob:diazo_theme
+
+.. note::
+    In contrast to other available ``mr.bob`` templates (e.g. `bobtemplates.plone`_), the packages created with ``ps.bob`` create the package folder as well.
 
 
 Available Templates
@@ -113,7 +116,7 @@ If you want to use the latest development version from GitHub, add ``ps.bob`` to
 This creates a mrbob-executeable in your bin-directory.
 Call it from the ``src``-directory of your project like this.::
 
-    $ ../bin/mrbob -O ps.diazo.mytheme ps.bob:diazo_theme
+    $ ../bin/mrbob ps.bob:diazo_theme
 
 
 Installation in a virtualenv
@@ -129,7 +132,7 @@ You can also install the latest version of ``ps.bob`` directly from GitHub::
 
 Now you can use it like this::
 
-    $ mrbob -O ps.diazo.mytheme ps.bob:diazo_theme
+    $ mrbob ps.bob:diazo_theme
 
 
 .. _`mr.bob`: http://mrbob.readthedocs.org/en/latest/
@@ -140,3 +143,4 @@ Now you can use it like this::
 .. _`tests`: http://docs.plone.org/external/plone.app.testing/docs/source/index.html
 .. _`travis`: http://travis-ci.org/
 .. _`z3c.jbot`: https://pypi.python.org/pypi/z3c.jbot
+.. _`bobtemplates.plone`: https://github.com/plone/bobtemplates.plone

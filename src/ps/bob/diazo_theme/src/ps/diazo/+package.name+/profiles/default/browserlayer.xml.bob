@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<layers>
-  <layer
-      name="ps.diazo.{{{ package.name }}}"
-      interface="ps.diazo.{{{ package.name }}}.interfaces.ICustomTheme"
-      />
-</layers>
