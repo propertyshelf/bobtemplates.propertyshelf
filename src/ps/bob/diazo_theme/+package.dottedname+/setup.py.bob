@@ -15,6 +15,9 @@ install_requires = [
     # -*- Extra requirements: -*-
     'plone.api',
     'z3c.jbot',
+{{% if theme.base %}}
+    '{{{ theme.base }}}',
+{{% endif %}}
 ]
 
 setup(
