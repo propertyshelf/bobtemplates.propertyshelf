@@ -12,6 +12,8 @@ Propertyshelf {{{ theme.name }}}
 .. toctree::
    :maxdepth: 2
 
+   configuration
+
 
 .. only:: html
 
