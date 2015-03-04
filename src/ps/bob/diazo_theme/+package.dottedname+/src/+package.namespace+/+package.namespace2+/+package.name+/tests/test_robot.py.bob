@@ -11,7 +11,6 @@ except ImportError:
 
 # zope imports
 from plone import api
-from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
 
 # local imports
