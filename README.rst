@@ -22,8 +22,9 @@ Plone and Diazo Packages
 ------------------------
 
 diazo_theme
-    A installable diazo core theme.
-    Those themes are used as a base for most customer themes which extend a core theme.
+    A installable diazo core or customer theme.
+    Core themes are mainly used as a base for most customer themes.
+    Customer themes can extend a core theme.
 
 
 Options
@@ -33,6 +34,10 @@ On creating a package you can choose from the following options. The default val
 
 diazo_theme
 -----------
+
+Type of the Theme (core or customer) [customer]
+    A customer theme can extend a core theme.
+    Core themes will have the ``ps.diazo`` namespace prefix, customer themes the ``customer.diazo`` namespace prefix.
 
 Name of the Theme [Example Theme]
     Should be something like 'Example Theme'.
