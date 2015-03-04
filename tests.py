@@ -27,11 +27,10 @@ class BaseTemplateTest(unittest.TestCase):
         options = {
             'dir': os.path.join(os.path.dirname(__file__)),
             'template': self.template,
-            'project': self.project,
             'answers_file': self.answers_file,
         }
         return self.env.run(
-            '{dir}/bin/mrbob -O {project} --config '
+            '{dir}/bin/mrbob --config '
             '{dir}/{answers_file} {dir}/src/ps/bob/{template}'.format(
                 **options
             )
@@ -41,21 +40,22 @@ class BaseTemplateTest(unittest.TestCase):
 class DiazoThemeTest(BaseTemplateTest):
     """Test case for the `diazo_theme` template."""
     template = 'diazo_theme'
-    project = 'ps.diazo.mytheme'
-    answers_file = 'test_answers/diazo_theme.ini'
 
-    def test_plone_addon_template(self):
-        """Test the `plone_addon` template.
+    def test_core_template(self):
+        """Validate the `diazo_theme` template.
+
         Generate a project from a template, test which files were created
-        and run all te)sts in the generated package.
+        and run all tests in the generated package.
         """
         self.maxDiff = None
+        self.answers_file = 'test_answers/diazo_theme_core.ini'
         result = self.create_template()
-        p = self.project
+        p = 'ps.diazo.mytheme'
         p_src = p + '/src/ps/diazo'
         expected = [
             p,
             p + '/.csslintrc',
+            p + '/.editorconfig',
             p + '/.gitignore',
             p + '/.jshintignore',
             p + '/CHANGES.rst',
@@ -106,12 +106,97 @@ class DiazoThemeTest(BaseTemplateTest):
             p_src + '/mytheme/profiles.zcml',
             p_src + '/mytheme/profiles/default',
             p_src + '/mytheme/profiles/default/browserlayer.xml',
+            p_src + '/mytheme/profiles/default/cssregistry.xml',
+            p_src + '/mytheme/profiles/default/jsregistry.xml',
             p_src + '/mytheme/profiles/default/metadata.xml',
+            p_src + '/mytheme/profiles/default/psdiazomytheme_marker.txt',
             p_src + '/mytheme/profiles/default/theme.xml',
             p_src + '/mytheme/profiles/uninstall',
             p_src + '/mytheme/profiles/uninstall/browserlayer.xml',
             p_src + '/mytheme/profiles/uninstall/theme.xml',
+            p_src + '/mytheme/setuphandlers.py',
             p_src + '/mytheme/template_overrides',
             p_src + '/mytheme/template_overrides/README',
+            p_src + '/mytheme/testing.py',
+        ]
+        self.assertItemsEqual(result.files_created.keys(), expected)
+
+    def test_customer_template(self):
+        """Validate the `diazo_theme` template.
+
+        Generate a project from a template, test which files were created
+        and run all tests in the generated package.
+        """
+        self.maxDiff = None
+        self.answers_file = 'test_answers/diazo_theme_customer.ini'
+        result = self.create_template()
+        p = 'customer.diazo.domain'
+        p_src = p + '/src/customer/diazo'
+        expected = [
+            p,
+            p + '/.csslintrc',
+            p + '/.editorconfig',
+            p + '/.gitignore',
+            p + '/.jshintignore',
+            p + '/CHANGES.rst',
+            p + '/README.rst',
+            p + '/bootstrap.py',
+            p + '/buildout.cfg',
+            p + '/docs',
+            p + '/docs/README',
+            p + '/docs/source',
+            p + '/docs/source/_static',
+            p + '/docs/source/_static/logo.png',
+            p + '/docs/source/_templates',
+            p + '/docs/source/_templates/empty',
+            p + '/docs/source/conf.py',
+            p + '/docs/source/index.rst',
+            p + '/setup.cfg',
+            p + '/setup.py',
+            p + '/src',
+            p + '/src/customer',
+            p + '/src/customer/__init__.py',
+            p_src,
+            p_src + '/__init__.py',
+            p_src + '/domain',
+            p_src + '/domain/Extensions',
+            p_src + '/domain/Extensions/install.py',
+            p_src + '/domain/__init__.py',
+            p_src + '/domain/config.py',
+            p_src + '/domain/configure.zcml',
+            p_src + '/domain/diazo_resources',
+            p_src + '/domain/diazo_resources/favicon.ico',
+            p_src + '/domain/diazo_resources/index.html',
+            p_src + '/domain/diazo_resources/manifest.cfg',
+            p_src + '/domain/diazo_resources/preview.png',
+            p_src + '/domain/diazo_resources/rules.xml',
+            p_src + '/domain/diazo_resources/static',
+            p_src + '/domain/diazo_resources/static/main.css',
+            p_src + '/domain/diazo_resources/static/main.js',
+            p_src + '/domain/interfaces.py',
+            p_src + '/domain/locales',
+            p_src + '/domain/locales/en',
+            p_src + '/domain/locales/en/LC_MESSAGES',
+            p_src + '/domain/locales/en/LC_MESSAGES/customer.diazo.domain.po',
+            p_src + '/domain/locales/manual.pot',
+            p_src + '/domain/locales/plone.pot',
+            p_src + '/domain/locales/customer.diazo.domain.pot',
+            p_src + '/domain/migration.py',
+            p_src + '/domain/profiles',
+            p_src + '/domain/profiles.zcml',
+            p_src + '/domain/profiles/default',
+            p_src + '/domain/profiles/default/browserlayer.xml',
+            p_src + '/domain/profiles/default/cssregistry.xml',
+            p_src + '/domain/profiles/default/jsregistry.xml',
+            p_src + '/domain/profiles/default/metadata.xml',
+            p_src + '/domain/profiles/default/customerdiazodomain_marker.txt',
+            p_src + '/domain/profiles/default/theme.xml',
+            p_src + '/domain/profiles/uninstall',
+            p_src + '/domain/profiles/uninstall/browserlayer.xml',
+            p_src + '/domain/profiles/uninstall/theme.xml',
+            p_src + '/domain/setuphandlers.py',
+            p_src + '/domain/template_overrides',
+            p_src + '/domain/template_overrides/README',
+            p_src + '/domain/testing.py',
         ]
         self.assertItemsEqual(result.files_created.keys(), expected)
