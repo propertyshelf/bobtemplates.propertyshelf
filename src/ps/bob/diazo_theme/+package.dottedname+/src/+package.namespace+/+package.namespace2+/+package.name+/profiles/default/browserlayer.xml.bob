@@ -2,6 +2,6 @@
 <layers>
   <layer
       name="{{{ package.dottedname }}}"
-      interface="{{{ package.dottedname }}}.interfaces.ICustomTheme"
+      interface="{{{ package.dottedname }}}.interfaces.{{{ package.browserlayer }}}"
       />
 </layers>

@@ -34,10 +34,14 @@ def prepare_diazo_render(configurator):
     camelcasename = dottedname.replace('.', ' ').title()\
         .replace(' ', '')\
         .replace('_', '')
-    browserlayer = "{0}Layer".format(camelcasename)
+    testlayer = '{0}Layer'.format(camelcasename)
 
     # package.testlayer = 'PsDiazoMythemeLayer'
-    configurator.variables['package.testlayer'] = browserlayer
+    configurator.variables['package.testlayer'] = testlayer
+
+    browserlayer = 'I{0}'.format(testlayer)
+    # package.browserlayer = 'IPsDiazoMythemeLayer'
+    configurator.variables['package.browserlayer'] = browserlayer
 
     # package.longname = 'psdiazomytheme'
     configurator.variables['package.longname'] = camelcasename.lower()

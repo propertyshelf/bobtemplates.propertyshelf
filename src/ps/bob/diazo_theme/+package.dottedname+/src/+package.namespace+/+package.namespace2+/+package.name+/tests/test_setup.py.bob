@@ -44,7 +44,7 @@ class TestSetup(unittest.TestCase):
     def test_addon_layer(self):
         """Validate that the browserlayer for our product is installed."""
         layers = [l.getName() for l in registered_layers()]
-        self.assertIn('ICustomTheme', layers)
+        self.assertIn('{{{ package.browserlayer }}}', layers)
 
     # def test_cssregistry(self):
     #     """Validate the CSS file registration."""
@@ -84,7 +84,7 @@ class UninstallTestCase(unittest.TestCase):
     def test_addon_layer_removed(self):
         """Validate that the browserlayer is removed."""
         layers = [l.getName() for l in registered_layers()]
-        self.assertNotIn('ICustomTheme', layers)
+        self.assertNotIn('{{{ package.browserlayer }}}', layers)
 
     # def test_cssregistry(self):
     #     """Validate the CSS file unregistration."""

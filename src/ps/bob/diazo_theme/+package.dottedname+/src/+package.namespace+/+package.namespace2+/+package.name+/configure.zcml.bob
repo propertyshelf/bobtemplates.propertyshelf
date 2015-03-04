@@ -32,7 +32,7 @@
   <include package="z3c.jbot" />
   <browser:jbot
       directory="template_overrides"
-      layer=".interfaces.ICustomTheme"
+      layer=".interfaces.{{{ package.browserlayer }}}"
       />
 
 </configure>
