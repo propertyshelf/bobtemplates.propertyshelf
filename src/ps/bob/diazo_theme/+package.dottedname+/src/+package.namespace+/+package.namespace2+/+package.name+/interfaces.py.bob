@@ -2,8 +2,8 @@
 """Common interface definitions for {{{ package.dottedname }}}."""
 
 # zope imports
-from zope.interface import Interface
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 
-class {{{ package.browserlayer }}}(Interface):
+class {{{ package.browserlayer }}}(IDefaultBrowserLayer):
     """Marker interface that defines a Zope 3 browser layer."""
