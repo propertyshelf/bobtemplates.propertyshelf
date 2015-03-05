@@ -4,7 +4,7 @@ Changelog
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fixed package setup.
 
 
 0.1 (2015-03-05)
