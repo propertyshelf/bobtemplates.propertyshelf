@@ -2,7 +2,10 @@
 """Pre- and Post-Render Hooks for mr.bob."""
 
 # python imports
-from mrbob.bobexceptions import ConfigurationError
+from mrbob.bobexceptions import (
+    ConfigurationError,
+    SkipQuestion,
+)
 
 
 def prepare_diazo_render(configurator):
@@ -45,3 +48,17 @@ def prepare_diazo_render(configurator):
 
     # package.longname = 'psdiazomytheme'
     configurator.variables['package.longname'] = camelcasename.lower()
+
+
+def diazo_theme_customer_only(configurator, question):
+    """Allow question only when theme type is 'customer'."""
+    theme_type = configurator.variables['theme.type']
+    if theme_type == 'core':
+        raise SkipQuestion
+
+
+def diazo_theme_with_base_only(configurator, question):
+    """Allow question only when theme should be extended."""
+    theme_base = configurator.variables.get('theme.base')
+    if not theme_base:
+        raise SkipQuestion

@@ -54,6 +54,9 @@ zptlint-bin = bin/zptlint
 
 
 [sources]
+{{% if theme.base %}}
+{{{ theme.base }}} = {{{ theme.base_repo_type}}} {{{ theme.base_url }}}
+{{% endif %}}
 
 
 [versions]
