@@ -40,7 +40,6 @@ setup(
     license='BSD',
     packages=find_packages('src', exclude=['ez_setup']),
     package_dir={'': 'src'},
-    namespace_packages=['ps'],
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
