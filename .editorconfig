@@ -9,7 +9,7 @@ indent_size = 2
 indent_style = space
 
 # 2 space indentation
-[{*.html,*.dtml,*.pt,*.zcml}]
+[{*.html,*.dtml,*.pt,*.xml,*.zcml}]
 indent_size = 2
 indent_style = space
 
