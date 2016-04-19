@@ -1,3 +1,5 @@
-recursive-include src *
-include *
+graft src/ps
+include *.py
+include *.rst
+recursive-include test_answers *.ini
 global-exclude *.pyc
