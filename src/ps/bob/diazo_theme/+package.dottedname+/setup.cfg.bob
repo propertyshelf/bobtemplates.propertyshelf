@@ -7,7 +7,7 @@ ignore =
     .csslintrc
     .jshintignore
     .travis.yml
-    bootstrap.py
+    buildout-bootstrap.py
     buildout.cfg
     templates
     templates/*
