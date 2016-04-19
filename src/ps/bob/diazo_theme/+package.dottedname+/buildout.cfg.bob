@@ -60,8 +60,5 @@ zptlint-bin = bin/zptlint
 
 
 [versions]
-collective.recipe.sphinxbuilder = 0.8.2
-mr.developer = 1.30
 plone.app.jquery = 1.8.3
 plone.app.testing = 4.2.4
-pygments = 1.6

@@ -3,7 +3,7 @@
 
 from setuptools import setup, find_packages
 
-version = '0.1dev'
+version = '0.1.dev0'
 description = 'Propertyshelf {{{ theme.name }}}.'
 long_description = ('\n'.join([
     open('README.rst').read(),
@@ -42,8 +42,8 @@ setup(
     keywords='plone diazo',
     author='Propertyshelf, Inc.',
     author_email='development@propertyshelf.com',
-    url='https://github.com/propertyshelf/{{{ package.dottedname }}}',
-    download_url='http://pypi.python.org/pypi/{{{ package.dottedname }}}',
+    url='https://bitbucket.org/propertyshelf/{{{ package.dottedname }}}',
+    download_url='https://bitbucket.org/propertyshelf/{{{ package.dottedname }}}',
     license='GPL',
     packages=find_packages('src', exclude=['ez_setup']),
     package_dir={'': 'src'},
