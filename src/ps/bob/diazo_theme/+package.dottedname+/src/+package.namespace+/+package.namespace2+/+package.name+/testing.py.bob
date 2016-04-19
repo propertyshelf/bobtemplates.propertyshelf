@@ -14,7 +14,6 @@ from plone.testing import (
     Layer,
     z2,
 )
-from zope.configuration import xmlconfig
 
 
 class {{{ package.testlayer }}}(PloneSandboxLayer):
@@ -25,11 +24,7 @@ class {{{ package.testlayer }}}(PloneSandboxLayer):
         """Set up Zope for testing."""
         # Load ZCML
         import {{{ package.dottedname }}}
-        xmlconfig.file(
-            'configure.zcml',
-            {{{ package.dottedname }}},
-            context=configurationContext
-        )
+        self.loadZCML(package={{{ package.dottedname }}})
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, '{{{ package.dottedname }}}:default')
