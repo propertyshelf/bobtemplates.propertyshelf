@@ -16,7 +16,6 @@ ignore =
 
 [distutils]
 index-servers =
-    pypi
 
 
 [sdist]
@@ -27,3 +26,7 @@ formats = zip
 diazo_export.enabled = 1
 diazo_export.path = src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/diazo_resources
 diazo_export.adjust_title = 1
+
+
+[zest.releaser]
+release = no
