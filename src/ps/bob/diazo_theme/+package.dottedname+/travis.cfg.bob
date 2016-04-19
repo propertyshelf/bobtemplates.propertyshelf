@@ -68,18 +68,13 @@ zptlint-bin = ${buildout:bin-directory}/zptlint
 [versions-4.1.x]
 plone.app.testing = 4.2.2
 
-# Keep RF/SL stuff up to date to avoid random failures.
-pygments = 1.6
-
 
 [versions-4.2.x]
 # 4.2.7 is currently not available as UnifiedInstaller.
 Plone = 4.2.6
 
-# Keep RF/SL stuff up to date to avoid random failures.
-pygments = 1.6
-
 
 [versions-4.3.x]
-# Keep RF/SL stuff up to date to avoid random failures.
-pygments = 1.6
+
+
+[versions-5.x]
