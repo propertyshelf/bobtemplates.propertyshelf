@@ -6,7 +6,7 @@ from setuptools import (
     setup,
 )
 
-version = '0.1.2'
+version = '0.2.dev0'
 description = 'mr.bob templates for Propertyshelf projects.'
 long_description = ('\n'.join([
     open('README.rst').read(),
