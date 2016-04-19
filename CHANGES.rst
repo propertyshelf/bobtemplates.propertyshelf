@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.2 (unreleased)
-----------------
+0.1.2 (2016-04-19)
+------------------
 
 - Fixed wrong profile id in migration script.
 - Removed unnecessary namespace_packages from setup.py.
