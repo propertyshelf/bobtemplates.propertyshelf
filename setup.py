@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 """Setup for ps.bob package."""
 
-from setuptools import find_packages
-from setuptools import setup
+from setuptools import (
+    find_packages,
+    setup,
+)
 
 version = '0.2.dev0'
 description = 'mr.bob templates for Propertyshelf projects.'
 long_description = ('\n'.join([
     open('README.rst').read(),
+    'Contributors',
+    '------------\n',
+    open('CONTRIBUTORS.rst').read(),
     open('CHANGES.rst').read(),
 ]))
 
