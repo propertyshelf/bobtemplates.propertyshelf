@@ -65,6 +65,7 @@ zptlint-bin = ${buildout:bin-directory}/zptlint
 
 
 [sources]
+ps.plone.theming = git https://github.com/propertyshelf/ps.plone.theming.git
 {{% if theme.base %}}
 {{{ theme.base }}} = {{{ theme.base_repo_type}}} {{{ theme.base_url }}}
 {{% endif %}}
