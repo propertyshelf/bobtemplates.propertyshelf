@@ -1,0 +1,45 @@
+<registry>
+<!-- Uncomment if you make use of ps.plone.theming's theme options. -->
+<!--
+  <record field="available_color_options"
+      name="ps.plone.theming.interfaces.IPSThemingVocabularies.available_color_options"
+      interface="ps.plone.theming.interfaces.IPSThemingVocabularies">
+    <value>
+      <element>color-1</element>
+      <element>color-2</element>
+    </value>
+  </record>
+-->
+<!--
+  <record field="available_footer_options"
+      name="ps.plone.theming.interfaces.IPSThemingVocabularies.available_footer_options"
+      interface="ps.plone.theming.interfaces.IPSThemingVocabularies">
+    <value>
+      <element>footer-default</element>
+      <element>footer-v1</element>
+      <element>footer-v2</element>
+    </value>
+  </record>
+-->
+<!--
+  <record field="available_header_options"
+      name="ps.plone.theming.interfaces.IPSThemingVocabularies.available_header_options"
+      interface="ps.plone.theming.interfaces.IPSThemingVocabularies">
+    <value>
+      <element>header-default</element>
+      <element>header-v1</element>
+      <element>header-v2</element>
+    </value>
+  </record>
+-->
+<!--
+  <record field="available_layout_options"
+      name="ps.plone.theming.interfaces.IPSThemingVocabularies.available_layout_options"
+      interface="ps.plone.theming.interfaces.IPSThemingVocabularies">
+    <value>
+      <element>boxed</element>
+      <element>wide</element>
+    </value>
+  </record>
+-->
+</registry>

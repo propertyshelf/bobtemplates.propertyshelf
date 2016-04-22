@@ -3,6 +3,7 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-plone.app.theming:default</dependency>
+    <dependency>profile-ps.plone.theming:default</dependency>
 {{% if theme.base %}}
     <dependency>profile-{{{ theme.base }}}:default</dependency>
 {{% endif %}}

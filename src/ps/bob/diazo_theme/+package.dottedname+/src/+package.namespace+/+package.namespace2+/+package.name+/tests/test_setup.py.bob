@@ -70,6 +70,11 @@ class TestSetup(unittest.TestCase):
         qi = self.portal.portal_quickinstaller
         self.assertTrue(qi.isProductInstalled('plone.app.theming'))
 
+    def test_ps_plone_theming_installed(self):
+        """Validate that ps.plone.theming is installed."""
+        qi = self.portal.portal_quickinstaller
+        self.assertTrue(qi.isProductInstalled('ps.plone.theming'))
+
 
 class UninstallTestCase(unittest.TestCase):
 
