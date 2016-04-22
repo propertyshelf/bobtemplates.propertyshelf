@@ -4,6 +4,12 @@ description = {{{ theme.name }}} from {{{ package.dottedname }}} package.
 preview = preview.png
 doctype = <!Doctype html>
 
+
+[theme:genericsetup]
+install = install
+uninstall = uninstall
+
+
 [theme:parameters]
 portal_url = portal_state/portal_url
 language = portal_state/language
