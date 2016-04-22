@@ -4,7 +4,7 @@ Changelog
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add dependency to ``ps.plone.theming`` for diazo packages.
 
 
 0.1.2 (2016-04-19)
