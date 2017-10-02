@@ -64,6 +64,11 @@ zptlint = True
 zptlint-bin = ${buildout:bin-directory}/zptlint
 
 
+[instance]
+eggs +=
+    ${buildout:package-name}[testfixture]
+
+
 [sources]
 
 
