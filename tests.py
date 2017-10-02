@@ -59,7 +59,6 @@ class DiazoThemeTest(BaseTemplateTest):
             p + '/.editorconfig',
             p + '/.gitignore',
             p + '/.jshintignore',
-            p + '/.travis.yml',
             p + '/CHANGES.rst',
             p + '/CONTRIBUTORS.rst',
             p + '/README.rst',
@@ -137,6 +136,5 @@ class DiazoThemeTest(BaseTemplateTest):
             p_src + '/mytheme/tests/robot/test_setup.robot',
             p_src + '/mytheme/tests/test_robot.py',
             p_src + '/mytheme/tests/test_setup.py',
-            p + '/travis.cfg',
         ]
         self.assertItemsEqual(result.files_created.keys(), expected)
