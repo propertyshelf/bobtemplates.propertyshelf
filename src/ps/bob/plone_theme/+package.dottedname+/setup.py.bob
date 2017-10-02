@@ -22,9 +22,6 @@ install_requires = [
     'plone.api',
     'spirit.plone.theming',
     'z3c.jbot',
-{{% if theme.base %}}
-    '{{{ theme.base }}}',
-{{% endif %}}
 ]
 
 setup(

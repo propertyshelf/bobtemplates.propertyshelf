@@ -5,7 +5,7 @@ ps.bob
 
 To create a package like ``ps.diazo.mytheme``::
 
-    $ mrbob ps.bob:diazo_theme
+    $ mrbob ps.bob:plone_theme
 
 .. note::
     In contrast to other available ``mr.bob`` templates (e.g. `bobtemplates.plone`_), the packages created with ``ps.bob`` create the package folder as well.
@@ -24,7 +24,7 @@ The templates provided by ``ps.bob`` are categorized as follows:
 Plone and Diazo Packages
 ------------------------
 
-diazo_theme
+plone_theme
     A installable diazo core or customer theme.
     Core themes are mainly used as a base for most customer themes.
     Customer themes can extend a core theme.
@@ -35,7 +35,7 @@ Options
 
 On creating a package you can choose from the following options. The default value is in [square brackets].
 
-diazo_theme
+plone_theme
 -----------
 
 Type of the Theme (core or customer) [customer]
@@ -130,7 +130,7 @@ If you want to use the latest development version from GitHub, add ``ps.bob`` to
 This creates a mrbob-executeable in your bin-directory.
 Call it from the ``src``-directory of your project like this.::
 
-    $ ../bin/mrbob ps.bob:diazo_theme
+    $ ../bin/mrbob ps.bob:plone_theme
 
 
 Installation in a virtualenv
@@ -146,7 +146,7 @@ You can also install the latest version of ``ps.bob`` directly from GitHub::
 
 Now you can use it like this::
 
-    $ mrbob ps.bob:diazo_theme
+    $ mrbob ps.bob:plone_theme
 
 
 .. _`mr.bob`: http://mrbob.readthedocs.org/en/latest/

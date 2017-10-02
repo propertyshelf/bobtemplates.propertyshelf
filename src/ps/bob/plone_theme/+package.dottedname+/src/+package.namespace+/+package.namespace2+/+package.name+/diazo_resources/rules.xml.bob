@@ -7,13 +7,8 @@
 
   <!-- <rules css:if-content="#visual-portal-wrapper"> -->
 
-{{% if theme.base %}}
-    <!-- Include {{{ theme.base }}} as a base theme. -->
-    <!-- <xi:include href="/++theme++{{{ theme.base }}}/rules.xml"/> -->
-{{% else %}}
     <!-- Use the theme template from index.html. -->
     <!-- <theme href="/++theme++{{{ package.dottedname }}}/index.html" /> -->
-{{% endif %}}
 
     <!-- <after css:theme-children="html head"> -->
       <!-- Add custom stylesheet. -->

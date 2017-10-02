@@ -41,13 +41,6 @@ class TestSetup(unittest.TestCase):
         qi = self.portal.portal_quickinstaller
         self.assertTrue(qi.isProductInstalled(config.PROJECT_NAME))
 
-{{% if theme.base %}}
-    def test_base_theme_is_installed(self):
-        """Validate that the base theme is installed."""
-        qi = self.portal.portal_quickinstaller
-        self.assertTrue(qi.isProductInstalled('{{{ theme.base }}}'))
-
-{{% endif %}}
     def test_addon_layer(self):
         """Validate that the browserlayer for our product is installed."""
         layers = [l.getName() for l in registered_layers()]

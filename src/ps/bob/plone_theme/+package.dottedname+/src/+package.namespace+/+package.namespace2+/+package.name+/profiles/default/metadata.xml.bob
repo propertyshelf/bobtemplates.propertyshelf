@@ -4,8 +4,5 @@
   <dependencies>
     <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-spirit.plone.theming:default</dependency>
-{{% if theme.base %}}
-    <dependency>profile-{{{ theme.base }}}:default</dependency>
-{{% endif %}}
   </dependencies>
 </metadata>
