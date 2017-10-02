@@ -17,13 +17,14 @@ robot_tests_folder = ${buildout:directory}/src/{{{ package.namespace }}}/{{{ pac
 parts +=
     i18ndude
     node
+    npm-install
     rebuild_docs-sh
     rebuild_i18n-sh
     releaser
     sphinxbuilder
     testnorobot
-    zptlint
     updatedocsimages
+    zptlint
 
 extensions += mr.developer
 
@@ -37,7 +38,7 @@ clean-lines = True
 csslint = True
 csslint-bin = ${buildout:bin-directory}/csslint
 deprecated-aliases = True
-directory = ${buildout:directory}/src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}
+directory = ${buildout:directory}/src
 find-untranslated = True
 flake8-extensions =
     flake8-blind-except
@@ -67,6 +68,11 @@ zptlint-bin = ${buildout:bin-directory}/zptlint
 [instance]
 eggs +=
     ${buildout:package-name}[testfixture]
+
+
+[npm-install]
+recipe = plone.recipe.command
+command = cd ${buildout:directory}; npm install .; cd ${buildout:directory}/src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/theme; npm install .
 
 
 [sources]
