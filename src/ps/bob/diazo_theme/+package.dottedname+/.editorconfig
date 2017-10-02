@@ -4,12 +4,7 @@ end_of_line = lf
 insert_final_newline = true
 
 # 2 space indentation
-[*.js]
-indent_size = 2
-indent_style = space
-
-# 2 space indentation
-[{*.html,*.dtml,*.pt,*xml,*.zcml}]
+[*.{css,html,js,less,pt,sass,scss,xml,zcml}]
 indent_size = 2
 indent_style = space
 
