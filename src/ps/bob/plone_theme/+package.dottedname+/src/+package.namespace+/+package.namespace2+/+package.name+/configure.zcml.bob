@@ -22,7 +22,7 @@
   <!-- Register the diazo theme resources. -->
   <!-- =================================== -->
   <plone:static
-      directory="diazo_resources"
+      directory="theme"
       type="theme"
       />
 

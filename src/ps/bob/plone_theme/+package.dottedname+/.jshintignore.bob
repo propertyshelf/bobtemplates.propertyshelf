@@ -1,1 +1,1 @@
-src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/diazo_resources/external/*.js
+src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/theme/assets/libraries/*.js
