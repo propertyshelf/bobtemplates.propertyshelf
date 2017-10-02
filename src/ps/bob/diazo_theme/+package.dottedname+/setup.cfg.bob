@@ -1,16 +1,18 @@
 [check-manifest]
 ignore =
     *.DS_Store
+    *.css.map
     .tx
     .tx/*
     .coveragerc
     .csslintrc
+    .editorconfig
     .jshintignore
     .travis.yml
-    buildout-bootstrap.py
+    Gruntfile.js
     buildout.cfg
-    templates
-    templates/*
+    package.json
+    requirements.txt
     travis.cfg
 
 
