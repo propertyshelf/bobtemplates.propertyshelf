@@ -1,0 +1,161 @@
+module.exports = function (grunt) {
+  'use strict';
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    // we could just concatenate everything, really
+    // but we like to have it the complex way.
+    // also, in this way we do not have to worry
+    // about putting files in the correct order
+    // (the dependency tree is walked by r.js)
+    less: {
+      dev: {
+        options: {
+          compress: false,
+          paths: [],
+          strictMath: false,
+          sourceMap: true,
+          sourceMapFileInline: true
+        },
+        files: {
+          'assets/css/theme.css': '_less/theme.less',
+        }
+      },
+      dist: {
+        options: {
+          compress: true,
+          paths: [],
+          strictMath: false,
+          sourceMap: false,
+        },
+        files: {
+          'assets/css/theme.css': '_less/theme.less',
+        }
+      }
+    },
+    scss: {
+      watch: {
+        options: {
+          cssDir: 'assets/css',
+          environment: 'development',
+          force: false,
+          outputStyle: 'expanded',
+          sassDir: '_scss',
+          sourcemap: true
+        }
+      },
+      dev: {
+        options: {
+          cssDir: 'assets/css',
+          environment: 'development',
+          force: false,
+          outputStyle: 'expanded',
+          sassDir: '_scss',
+          sourcemap: true,
+          watch: true
+        }
+      },
+      dist: {
+        options: {
+          cssDir: 'assets/css',
+          environment: 'production',
+          force: true,
+          outputStyle: 'compressed',
+          sassDir: '_scss',
+          sourcemap: false
+        }
+      }
+    },
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('autoprefixer')({
+            browsers: ['last 2 versions']
+          })
+        ]
+      },
+      dev: {
+        options: {
+          map: true,
+        },
+        src: 'assets/css/*.css'
+      },
+      dist: {
+        map: false,
+        src: 'assets/css/*.css'
+      }
+    },
+    watch: {
+      less: {
+        files: [
+          '_less/*.less'
+        ],
+        tasks: ['less:dev', 'postcss:dev']
+      },
+      scss: {
+        files: [
+          '_scss/*.scss',
+          '_scss/**/*.scss'
+        ],
+        tasks: ['scss:watch', 'postcss:dev']
+      },
+    },
+    browserSync: {
+      html: {
+        bsFiles: {
+          src : [
+            'assets/css/*.css',
+            'assets/js/*.js',
+            '*.html'
+          ]
+        },
+        options: {
+          watchTask: true,
+          debugInfo: true,
+          online: true,
+          server: {
+            baseDir: "."
+          },
+        }
+      },
+      plone: {
+        bsFiles: {
+          src : [
+            'assets/css/*.css',
+            'assets/js/*.js',
+            'rules/*.xml',
+            '*.html',
+            '*.xml'
+          ]
+        },
+        options: {
+          watchTask: true,
+          debugInfo: true,
+          proxy: "localhost:8080",
+          reloadDelay: 3000,
+          // reloadDebounce: 2000,
+          online: true
+        }
+      }
+    }
+  });
+
+
+  // grunt.loadTasks('tasks');
+  grunt.loadNpmTasks('grunt-browser-sync');
+  // grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
+
+  // CWD to theme folder
+  grunt.file.setBase('./src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/theme');
+
+  grunt.registerTask('release', ['less:dist', 'postcss:dist']);
+  // grunt.registerTask('release', ['scss:dist', 'postcss:dist']);
+  grunt.registerTask('compile', ['less:dev', 'postcss:dev']);
+  // grunt.registerTask('compile', ['scss:dev']);
+  grunt.registerTask('default', ['release']);
+  grunt.registerTask('bsync', ['browserSync:html', 'watch']);
+  grunt.registerTask('bsync-plone', ['browserSync:plone', 'watch']);
+};

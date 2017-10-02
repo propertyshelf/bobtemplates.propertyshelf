@@ -61,6 +61,7 @@ class DiazoThemeTest(BaseTemplateTest):
             p + '/.jshintignore',
             p + '/CHANGES.rst',
             p + '/CONTRIBUTORS.rst',
+            p + '/Gruntfile.js',
             p + '/README.rst',
             p + '/buildout.cfg',
             p + '/docs',
