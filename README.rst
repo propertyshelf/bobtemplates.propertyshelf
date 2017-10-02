@@ -25,9 +25,7 @@ Plone and Diazo Packages
 ------------------------
 
 plone_theme
-    A installable diazo core or customer theme.
-    Core themes are mainly used as a base for most customer themes.
-    Customer themes can extend a core theme.
+    A installable diazo theme for Plone.
 
 
 Options
@@ -37,24 +35,6 @@ On creating a package you can choose from the following options. The default val
 
 plone_theme
 -----------
-
-Type of the Theme (core or customer) [customer]
-    A customer theme can extend a core theme.
-    Core themes will have the ``ps.diazo`` namespace prefix, customer themes the ``customer.diazo`` namespace prefix.
-
-Base theme to extend
-    Add the package name of the core theme you want to extend.
-    Leave empty if you don't want to extend.
-    This options is only available for ``customer`` themes.
-
-Repository type of the base theme to extend [git]
-    Should be something like 'git', 'hg', 'svn'.
-    Used for the mr.developer source section within the buildout.
-    This option is only available if a base theme was provided.
-
-Repository URL of the base theme to extend [https://github.com/propertyshelf/ps.diazo.vanilla]
-    The URL to the repo used for the mr.developer source section within the buildout.
-    This option is only available if a base theme was provided.
 
 Name of the Theme [Example Theme]
     Should be something like 'Example Theme'.
