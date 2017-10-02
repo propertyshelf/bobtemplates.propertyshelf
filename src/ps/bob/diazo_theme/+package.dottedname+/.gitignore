@@ -1,9 +1,12 @@
+*.css.map
 *.egg-info
 *.mo
 *.pyc
 *~
 .installed.cfg
 .mr.developer.cfg
+.sass-cache/
+package-lock.json
 bin/
 checkouts/
 coverage/
@@ -13,5 +16,6 @@ docs/build/
 docs/themepreview/
 downloads/
 eggs/
+node_modules/
 parts/
 var/
