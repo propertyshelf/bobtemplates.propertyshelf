@@ -3,7 +3,7 @@ ps.bob
 
 ``ps.bob`` provides several `mr.bob`_ template to generate packages for `Propertyshelf`_ projects.
 
-To create a package like ``ps.diazo.mytheme``::
+To create a package like ``ps.diazo.example``::
 
     $ mrbob ps.bob:plone_theme
 

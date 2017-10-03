@@ -16,7 +16,7 @@ def prepare_diazo_render(configurator):
     configurator.variables['package.namespace'] = namespace
     configurator.variables['package.namespace2'] = namespace2
 
-    # package.uppercasename = 'PS_DIAZO_MYTHEME'
+    # package.uppercasename = 'PS_DIAZO_EXAMPLE'
     configurator.variables['package.uppercasename'] = \
         dottedname.replace('.', '_').upper()
 
@@ -25,12 +25,12 @@ def prepare_diazo_render(configurator):
         .replace('_', '')
     testlayer = '{0}Layer'.format(camelcasename)
 
-    # package.testlayer = 'PsDiazoMythemeLayer'
+    # package.testlayer = 'PsDiazoExampleLayer'
     configurator.variables['package.testlayer'] = testlayer
 
     browserlayer = 'I{0}'.format(testlayer)
-    # package.browserlayer = 'IPsDiazoMythemeLayer'
+    # package.browserlayer = 'IPsDiazoExampleLayer'
     configurator.variables['package.browserlayer'] = browserlayer
 
-    # package.longname = 'psdiazomytheme'
+    # package.longname = 'psdiazoexample'
     configurator.variables['package.longname'] = camelcasename.lower()
