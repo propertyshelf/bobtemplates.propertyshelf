@@ -4,23 +4,44 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude">
 
+  <!-- Add defaults for theming parameters here as fallback. -->
+  <!-- This is then useful if someone deletes a param from the advanced theming settings. -->
+  <xsl:param name="portal_url"></xsl:param>
 
-  <!-- <rules css:if-content="#visual-portal-wrapper"> -->
+  <!-- Store settings from spirit.plone.theming in variables. -->
+  <!-- Note: you have to redefine those variables in the root of your theme if you extend this theme. -->
+  <xsl:variable name="header" css:select="#PLONE_THEMING_HEADER_OPTION"></xsl:variable>
+  <xsl:variable name="footer" css:select="#PLONE_THEMING_FOOTER_OPTION"></xsl:variable>
+  <xsl:variable name="layout" css:select="#PLONE_THEMING_LAYOUT_OPTION"></xsl:variable>
+  <xsl:variable name="color" css:select="#PLONE_THEMING_COLOR_OPTION"></xsl:variable>
+  <xsl:variable name="pattern" css:select="#PLONE_THEMING_PATTERN_OPTION"></xsl:variable>
+
+  <!-- Include barceloneta's backend.xml for backend theming. -->
+  <rules css:if-not-content="body.viewpermission-view, body.viewpermission-none">
+    <xi:include href="++theme++barceloneta/backend.xml" />
+  </rules>
+
+  <!-- Include theme for frontend theming. -->
+  <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
 
     <!-- Use the theme template from index.html. -->
-    <!-- <theme href="/++theme++{{{ package.dottedname }}}/index.html" /> -->
+    <theme href="index.html" />
+    <notheme css:if-not-content="#visual-portal-wrapper" />
 
-    <!-- <after css:theme-children="html head"> -->
-      <!-- Add custom stylesheet. -->
-      <!-- <link rel="stylesheet" href="{$portal_url}/++theme++{{{ package.dottedname }}}/static/main.css" type="text/css" /> -->
+    <!-- Include transformations here which apply to all content.-->
+    <xi:include href="rules/transformations.xml" />
 
-      <!-- Add custom JavaScript. -->
-      <!-- <script src="{$portal_url}/++theme++{{{ package.dottedname }}}/static/main.js"></script> -->
+    <!-- Include custom rules. -->
+    <xi:include href="rules/core.xml" />
+    <xi:include href="rules/header.xml" />
+    <xi:include href="rules/content.xml" />
+    <xi:include href="rules/footer.xml" />
 
-      <!--Include Google Fonts. -->
-      <!-- <link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css' /> -->
-    <!-- </after> -->
+  </rules>
 
-  <!-- </rules> -->
+  <!-- Import TTW customizations -->
+  <xi:include href="/++theme++{{{ package.longname }}}-custom/rules.xml">
+    <xi:fallback />
+  </xi:include>
 
 </rules>
