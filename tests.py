@@ -119,8 +119,6 @@ class DiazoThemeTest(BaseTemplateTest):
             p_src + '/mytheme/profiles.zcml',
             p_src + '/mytheme/profiles/default',
             p_src + '/mytheme/profiles/default/browserlayer.xml',
-            p_src + '/mytheme/profiles/default/cssregistry.xml',
-            p_src + '/mytheme/profiles/default/jsregistry.xml',
             p_src + '/mytheme/profiles/default/metadata.xml',
             p_src + '/mytheme/profiles/default/psdiazomytheme_marker.txt',
             p_src + '/mytheme/profiles/default/theme.xml',
