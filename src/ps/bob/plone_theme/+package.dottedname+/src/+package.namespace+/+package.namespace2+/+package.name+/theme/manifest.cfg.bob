@@ -1,8 +1,13 @@
 [theme]
-title = Propertyshelf {{{ theme.name }}}
-description = {{{ theme.name }}} from {{{ package.dottedname }}} package.
+title = {{{ theme.name }}} Theme
+description = A Plone 5 Theme by Propertyshelf
 preview = preview.png
-doctype = <!Doctype html>
+doctype = <!DOCTYPE html>
+
+rules = /++theme++{{{ package.longname }}}/rules.xml
+prefix = /++theme++{{{ package.longname }}}
+production-css = ++theme++{{{ package.longname }}}-custom/custom.css
+production-js = ++theme++{{{ package.longname }}}-custom/custom.js
 
 
 [theme:genericsetup]
@@ -12,6 +17,3 @@ uninstall = uninstall
 
 [theme:parameters]
 portal_url = portal_state/portal_url
-language = portal_state/language
-ajax_load = python: 'ajax_load' in request.form
-anonymous = portal_state/anonymous

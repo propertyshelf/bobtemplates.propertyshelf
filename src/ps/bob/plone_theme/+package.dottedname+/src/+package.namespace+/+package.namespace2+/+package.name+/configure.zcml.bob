@@ -23,6 +23,7 @@
   <!-- =================================== -->
   <plone:static
       directory="theme"
+      name="{{{ package.longname }}}"
       type="theme"
       />
 
