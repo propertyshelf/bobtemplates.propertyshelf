@@ -27,7 +27,7 @@ index-servers =
 formats = zip
 
 
-[ps.releaser]
+[spirit.releaser]
 diazo_export.enabled = 1
 diazo_export.path = src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/theme
 diazo_export.adjust_title = 1
