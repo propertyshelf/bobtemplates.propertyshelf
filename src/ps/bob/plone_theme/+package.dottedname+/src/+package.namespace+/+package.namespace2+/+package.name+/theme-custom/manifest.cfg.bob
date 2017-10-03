@@ -1,0 +1,10 @@
+[theme]
+title = {{{ theme.name }}} Theme Customizations
+description = Copy this as "{{{ package.longname }}}-custom", but don't activate it, to add customizations for the {{{ theme.name }}} Theme TTW
+preview = preview.jpg
+doctype = <!DOCTYPE html>
+
+rules = /++theme++{{{ package.longname }}}/rules.xml?custom
+prefix = /++theme++{{{ package.longname }}}
+production-css = ++theme++{{{ package.longname }}}-custom/custom.css
+production-js = ++theme++{{{ package.longname }}}-custom/custom.js
