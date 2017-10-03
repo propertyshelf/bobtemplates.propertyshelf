@@ -1,1 +1,3 @@
 src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/theme/assets/libraries/*.js
+src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/theme/assets/libraries/**/*.js
+src/{{{ package.namespace }}}/{{{ package.namespace2 }}}/{{{ package.name }}}/theme/node_modules/**/*.js
