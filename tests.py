@@ -98,6 +98,7 @@ class DiazoThemeTest(BaseTemplateTest):
             p_src + '/mytheme/theme/install/.gitkeep',
             p_src + '/mytheme/theme/install/registry.xml',
             p_src + '/mytheme/theme/manifest.cfg',
+            p_src + '/mytheme/theme/package.json',
             p_src + '/mytheme/theme/preview.png',
             p_src + '/mytheme/theme/rules.xml',
             p_src + '/mytheme/theme/static',
