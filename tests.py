@@ -135,6 +135,8 @@ class DiazoThemeTest(BaseTemplateTest):
             p_src + '/mytheme/profiles/default/metadata.xml',
             p_src + '/mytheme/profiles/default/psdiazomytheme_marker.txt',
             p_src + '/mytheme/profiles/default/theme.xml',
+            p_src + '/mytheme/profiles/testfixture',
+            p_src + '/mytheme/profiles/testfixture/metadata.xml',
             p_src + '/mytheme/profiles/uninstall',
             p_src + '/mytheme/profiles/uninstall/browserlayer.xml',
             p_src + '/mytheme/profiles/uninstall/theme.xml',

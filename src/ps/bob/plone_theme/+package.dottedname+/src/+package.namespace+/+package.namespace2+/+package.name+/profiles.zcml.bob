@@ -7,20 +7,30 @@
   <!-- GenericSetup Profiles. -->
   <!-- ====================== -->
   <genericsetup:registerProfile
-      name="default"
-      title="Propertyshelf {{{ theme.name }}}"
+      description="{{{ theme.name }}} Theme for Plone 5."
       directory="profiles/default"
-      description="Installs the diazo theme in the Plone site."
+      name="default"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      title="{{{ package.dottedname }}}"
       />
 
   <genericsetup:registerProfile
-      name="uninstall"
-      title="Propertyshelf {{{ theme.name }}}: Uninstall"
-      directory="profiles/uninstall"
-      description="Removes the diazo theme from the Plone site."
+      description="Testfixture profile for {{{ package.dottedname }}}."
+      directory="profiles/testfixture"
+      name="testfixture"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      title="{{{ package.dottedname }}} testfixture profile"
       />
+
+  <genericsetup:registerProfile
+      description="Uninstall profile for {{{ package.dottedname }}}."
+      directory="profiles/uninstall"
+      name="uninstall"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      title="{{{ package.dottedname }}} uninstall profile"
+      />
+
+  <utility factory=".setuphandlers.HiddenProfiles" name="{{{ package.dottedname }}}" />
 
 
   <!-- GenericSetup Import Steps. -->
