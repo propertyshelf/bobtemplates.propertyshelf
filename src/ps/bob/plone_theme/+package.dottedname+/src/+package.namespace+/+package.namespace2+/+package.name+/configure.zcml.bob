@@ -27,6 +27,12 @@
       type="theme"
       />
 
+  <plone:static
+      directory="theme-custom"
+      name="{{{ package.longname }}}-custom"
+      type="theme"
+      />
+
 
   <!-- Register z4c.jbot template overrides. -->
   <!-- ===================================== -->
